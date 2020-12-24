@@ -18,6 +18,7 @@ public class Calculator {
 			Thread.sleep(500);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
+			Thread.currentThread().interrupt();
 		}
 	}
 
@@ -28,6 +29,14 @@ public class Calculator {
 			setIntegers.add(Integer.parseInt(String.valueOf(c)));
 		}
 		return setIntegers;
+	}
+	
+	public double add(double a, double b) {
+		return a + b;
+	}
+
+	public double multiply(double a, double b) {
+		return a * b;
 	}
 
 }
